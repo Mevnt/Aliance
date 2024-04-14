@@ -33,26 +33,26 @@ body {
   height: 74px;
 }
 .navbar-light .header-logo-path {
-  fill: rgb(41, 45, 51);;
+  fill: rgb(41, 45, 51);
 }
 .header {
   padding: 94px;
   min-height: 100vh;
 }
 .header-image {
-  background-image: url("../img/main_img.jpeg");
+  background-image: url(../img/main_img.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom 57px right -23px;
 }
 .header-image::before {
   content: "";
   position: absolute;
-  background: rgba(41, 45, 51, 0.6);
+  background: rgba(41, 45, 51, 0.75);
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 201%;
   z-index: 0;
 }
 .header-logo {
@@ -66,8 +66,8 @@ body {
   flex-basis: 100%;
   display: flex;
   list-style: none;
-  padding: 0 50px;
-  margin: 0;
+  padding: 0 0px;
+  margin-left: 201px;
 }
 .header-nav-link {
   text-decoration: none;
@@ -75,12 +75,24 @@ body {
   margin-right: 50px;
   color: inherit;
 }
+.link-2 {
+  margin-left: 2px;
+}
+.link-3 {
+  margin-left: 5px;
+}
+.link-4 {
+  margin-left: 2px;
+}
+.item-5 {
+  padding-left: 2px;
+}
 .header-phone {
   flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-right: 50px;
+  margin-right: 331px;
 }
 .header-phone-link {
   text-decoration: none;
@@ -93,14 +105,26 @@ body {
   line-height: 160%;
   color: rgb(255, 255, 255);
   background: #3a71d1;
-  padding: 25px 60px;
+  padding: 25px 62px;
   border: none;
-  display: inline-block;
   cursor: pointer;
+  display: inline-block;
 }
 .navbar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 297px;
+  left: 1618px;
+  right: 0;
+  top: 0;
+  bottom: 0;
   flex-shrink: 0;
   height: 100%;
+  padding: 37px 42px;
+  word-spacing: 4.8px;
+  letter-spacing: -0.2px;
 }
 .header-button {
   height: 100%;
@@ -112,9 +136,14 @@ body {
 }
 .header-content {
   padding-top: 150px;
+  padding-left: 12px;
+  position: relative;
+  z-index: 1;
+  color: white;
 }
 .header-content {
   padding-top: 150px;
+  padding-left: 10px;
   position: relative;
   z-index: 1;
   color: white;
@@ -124,7 +153,9 @@ body {
   max-width: 1080px;
   font-size: 80px;
   line-height: 120%;
-  margin: 30px 0;
+  margin: 23px 0;
+  letter-spacing: 0.9px;
+  word-spacing: -2.7px;
 }
 .header-text {
   max-width: 720px;
@@ -132,34 +163,65 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
-  margin-bottom: 50px;
+  margin-bottom: 64px;
+  margin: 38px 0px 50px -1px;
 }
 .header-features {
+  margin-right: -10px;
   display: flex;
   min-height: 168px;
   padding: 0;
-  margin-top: 100px;
+  margin-top: 102px;
   list-style: none;
   color: white;
   position: relative;
+  margin-left: 10px;
+}
+.f-item-1 {
+  margin-top: -1px;
+}
+.f-item-2 {
+  margin-top: -1px;
+}
+.f-item-3 {
+  margin-top: -1px;
+}
+.f-item-4 {
+  margin-top: -1px;
+}
+.f-item-5 {
+  margin-top: -1px;
 }
 .header-features-item {
-  padding: 30px 50px;
+  padding: 33px 50px;
   border: 1px solid rgba(235, 235, 240, 0.2);
+  width: 288px;
+  height: 170px;
 }
 .header-features-text {
+  margin-top: 12px;
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
 }
+
 .header-features-item:not(:last-child) {
   border-right: none;
 }
+.section-light {
+  background-color: white;
+  margin-top: -111px;
+  padding: 123px 0px 0px 23px;
+}
 .container {
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.separator-2 {
+  margin-top: 25px;
 }
 .section-title {
+  margin-top: 25px;
   font-family: "BebasNeueBook.woff";
   color: rgba(41, 45, 51);
   font-size: 60px;
@@ -168,11 +230,17 @@ body {
 .steps {
   display: flex;
   list-style: none;
-  padding: 0;
-  gap: 30px;
+  padding: 3px 1px;
+  gap: 36px;
 }
 .steps-item {
-  max-width: 330px;
+  max-width: 321px;
+}
+.item-3 {
+  margin-left: 5px;
+}
+.item-4 {
+  margin-left: 21px;
 }
 .steps-num {
   color: rgb(92, 142, 230);
@@ -181,6 +249,7 @@ body {
   line-height: 120%;
   display: flex;
   align-items: center;
+  font-weight: 900;
 }
 .steps-num::after {
   content: "";
@@ -191,19 +260,31 @@ body {
 }
 .steps-title {
   color: rgb(41, 45, 51);
-  font-family: "BebasNeueBook.woff";
   font-size: 28px;
-  line-height: 160%;
+  line-height: 180%;
   margin-top: 30px;
   margin-bottom: 10px;
+  font-weight: 400;
+}
+.title-2 {
+  word-spacing: 20px;
+  height: 93px;
+  line-height: 1.7;
 }
 .steps-text {
   color: rgb(130, 138, 153);
-  font-family: "BebasNeueBook.woff";
   font-size: 16px;
   line-height: 160%;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+.text-3 {
+  word-spacing: 0.6px;
+  letter-spacing: 0px;
+  width: 302px;
+}
+.text-4 {
+  width: 295px;
 }
 .steps-link {
   display: flex;
@@ -212,12 +293,12 @@ body {
   color: rgb(92, 142, 230);
   font-size: 16px;
   line-height: 160%;
-  font-weight: 600;    
+  font-weight: 600;
 }
 .steps-link::before {
   content: "";
   height: 1px;
   background: rgb(92, 142, 230);
   width: 40px;
-  margin-right: 20px;   
+  margin-right: 20px;
 }

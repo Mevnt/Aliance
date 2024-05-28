@@ -308,12 +308,6 @@ body {
 .text-4 {
   width: 18.4375rem;
 }
-.slider-buttons-steps {
-  display: none;
-  height: 40px;
-  width: 240px;
-  background: rgb(92, 142, 230);
-}
 .steps-link {
   display: flex;
   align-items: center;
@@ -323,7 +317,7 @@ body {
   line-height: 160%;
   font-weight: 600;
   margin-top: 20px;
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
 }
 .steps-link::before {
   content: "";
@@ -331,6 +325,21 @@ body {
   background: rgb(92, 142, 230);
   width: 2.5rem;
   margin-right: 1.25rem;
+}
+.steps-buttons {
+  display: none;
+  height: 40px;
+  justify-content: flex-end;
+}
+.steps-button-prev,
+.steps-button-next {
+  background: rgb(92, 142, 230);
+  height: 100%;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 @media (max-width: 1700px) {
   html {
@@ -375,9 +384,10 @@ body {
   .slider-buttons {
     display: flex;
   }
-  .slider-buttons-steps {
+  .steps-buttons {
     display: flex;
   }
+
 }
 @media (max-width: 992px) {
   html {

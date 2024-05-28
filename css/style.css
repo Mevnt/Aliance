@@ -323,7 +323,7 @@ body {
   line-height: 160%;
   font-weight: 600;
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 10px;  
 }
 .steps-link::before {
   content: "";

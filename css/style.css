@@ -55,7 +55,6 @@ body {
   background-image: url(../img/main_img.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom 57px right -18px;
 }
 .header-image::before {
   content: "";
@@ -76,19 +75,46 @@ body {
 }
 .header-nav {
   flex-basis: 100%;
+  align-items: center;
+  height: 100%;
   display: flex;
   list-style: none;
   padding: 0;
   padding: 0rem;
   margin-left: 2.5rem;
 }
+.header-nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 .header-nav-item:not(:last-child) {
   margin-right: 5%;
 }
 .header-nav-link {
+  display: flex;
+  height: 100%;
+  align-items: center;
   text-decoration: none;
   font-size: 1rem;
   color: inherit;
+  position: relative;
+}
+.header-nav-link::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  bottom: -1px;
+  background: rgb(92, 142, 230);
+  transition: width 0.2s;
+  right: 0;
+  left: auto;
+}
+.header-nav-link:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
 }
 .link-2 {
   margin-left: 0.125rem;
@@ -234,6 +260,7 @@ body {
   background-color: white;
   margin-top: -6.9375rem;
   padding: 7.6875rem 0rem 0rem 1.4375rem;
+  margin-bottom: 5rem;
 }
 .container {
   margin-top: 0rem;
@@ -325,6 +352,10 @@ body {
   background: rgb(92, 142, 230);
   width: 2.5rem;
   margin-right: 1.25rem;
+  transition: width 0.2s;
+}
+.steps-link:hover::before {
+  width: 3.75rem;
 }
 .steps-buttons {
   display: none;
@@ -340,6 +371,97 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 150px;
+}
+.card {
+  text-decoration: none;
+  flex-basis: 33%;
+  border: 1px solid rgb(235, 235, 240);
+  position: relative;
+  transition: border 0.2s;
+}
+.card:hover .card-title {
+  color: rgb(92, 142, 230);
+}
+.card:hover {
+  border-color: rgb(92, 142, 230);
+}
+.card-content {
+  padding: 2.5rem 3.125rem;
+}
+.card-title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: rgb(41, 45, 51);
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+  transition: color 0.2s;
+}
+.card-text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: rgb(130, 138, 153);
+  margin-bottom: 24.625rem;
+}
+.card-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 90%;
+}
+.marks {
+  display: flex;
+}
+.mark {
+  text-decoration: none;
+  flex-basis: 50%;
+  border: solid 1px rgb(235, 235, 240);
+  transition: border 0.2s;
+  padding: 3.125rem;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto 2fr;
+  grid-column-gap: 3.125rem;
+  grid-template-areas:
+    "image title title"
+    "image text text";
+}
+.mark:hover .mark-title {
+  color: rgb(92, 142, 230);
+}
+.mark:hover {
+  border-color: rgb(92, 142, 230);
+}
+.mark-title {
+  grid-area: title;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 160%;
+  color: rgb(41, 45, 51);
+}
+.mark-text {
+  grid-area: text;
+  font-size: 1rem;
+  margin-top: 0.625rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: rgb(130, 138, 153);
+}
+.mark-image {
+  width: 100%;
+  fill: rgb(130, 138, 153);
+  grid-area: image;
+}
+.mark:hover .mark-image {
+  fill: #5c8ee6;
 }
 @media (max-width: 1700px) {
   html {
@@ -387,7 +509,12 @@ body {
   .steps-buttons {
     display: flex;
   }
-
+  .card {
+    flex-basis: 50%;
+  }
+  .mark {
+    grid-template-columns: auto auto;
+  }
 }
 @media (max-width: 992px) {
   html {
@@ -503,14 +630,17 @@ body {
     line-height: 160%;
     color: rgb(41, 45, 51);
   }
-  .close-menu .mobile-menu-line:nth-child(2) {
-    display: none;
-  }
   .close-menu .mobile-menu-line:nth-child(1) {
+    .close-menu .mobile-menu-line:nth-child(2) {
+      display: none;
+    }
     transform: rotate(45deg) translateY(11px);
   }
   .close-menu .mobile-menu-line:nth-child(3) {
     transform: rotate(-45deg) translateY(-10px);
+  }
+  .marks {
+    flex-direction: column;
   }
 }
 @media (max-width: 768px) {
@@ -523,6 +653,9 @@ body {
   .header-content {
     padding-top: 3rem;
   }
+  .card {
+    flex-basis: 100%;
+  }
 }
 @media (max-width: 576px) {
   .container {
@@ -533,5 +666,10 @@ body {
   }
   .header-content {
     font-size: 2rem;
+  }
+  .mark {
+    grid-template-areas:
+    "image title"
+    "text text";
   }
 }
